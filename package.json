@@ -1,0 +1,56 @@
+{
+  "name": "markdown-renderer",
+  "version": "1.0.0",
+  "description": "A beautiful macOS markdown renderer with syntax highlighting",
+  "main": "main.js",
+  "scripts": {
+    "bundle": "esbuild renderer.js --bundle --outfile=renderer.bundle.js --platform=browser --format=iife",
+    "start": "npm run bundle && electron .",
+    "dist": "npm run bundle && electron-builder --mac"
+  },
+  "author": "Rogue Nova",
+  "license": "MIT",
+  "dependencies": {
+    "highlight.js": "^11.11.1",
+    "marked": "^15.0.7"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8",
+    "esbuild": "^0.27.3"
+  },
+  "build": {
+    "appId": "com.roguenova.markdown-renderer",
+    "productName": "Markdown Renderer",
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": [
+        "dmg"
+      ],
+      "icon": "build/icon.icns"
+    },
+    "dmg": {
+      "title": "Markdown Renderer",
+      "iconSize": 80,
+      "contents": [
+        {
+          "x": 170,
+          "y": 180
+        },
+        {
+          "x": 430,
+          "y": 180,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "renderer.bundle.js",
+      "styles.css"
+    ]
+  }
+}

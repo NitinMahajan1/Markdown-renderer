@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.bundle.js
+.DS_Store
+package-lock.json
+build/
+session.json
+recent-files.json
