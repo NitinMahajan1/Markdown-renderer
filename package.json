@@ -10,6 +10,10 @@
   },
   "author": "Nitin Mahajan GravitAI",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NitinMahajan1/Markdown-renderer.git"
+  },
   "dependencies": {
     "highlight.js": "^11.11.1",
     "marked": "^15.0.7"
