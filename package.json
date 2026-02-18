@@ -8,7 +8,7 @@
     "start": "npm run bundle && electron .",
     "dist": "npm run bundle && electron-builder --mac"
   },
-  "author": "Rogue Nova",
+  "author": "Nitin Mahajan GravitAI",
   "license": "MIT",
   "dependencies": {
     "highlight.js": "^11.11.1",
